@@ -1,12 +1,10 @@
 import processing.core._
 
 object MySketch extends PApplet {
-  private var mySketch:MySketch = _
-
   def main() = {
-    mySketch = new MySketch
-
+    val mySketch = new MySketch
     val frame = new javax.swing.JFrame("MySketch")
+
     frame.getContentPane().add(mySketch)
     mySketch.init
 
