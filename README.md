@@ -16,7 +16,10 @@ If you installed Processing and Scala correctly, you can run the following comma
 ```
 
 You should see the following:
-![](scala-processing-template/example.png)
+
+<img src="https://github.com/joannecheng/scala-processing-template/blob/master/example.png?raw=true"
+height="250">
+</img>
 
 ### How to create a new sketch
 
