@@ -2,31 +2,45 @@ import processing.core._
 
 object MySketch extends PApplet {
   def main() = {
-    val mySketch = new MySketch
-    val frame = new javax.swing.JFrame("MySketch")
-
-    frame.getContentPane().add(mySketch)
-    mySketch.init
-
-    frame.setSize(500, 500)
-    frame.setVisible(true)
+    PApplet.runSketch(Array("MAIN"), new MySketch)
   }
 }
 
+// This is where your Sketch code goes
+
 class MySketch extends PApplet {
+  var yPos = 10
+  var moveDown = true
+
+  override def settings() = {
+    size(300, 500)
+  }
+
   // Processing sketch code goes here!
   override def setup() = {
-    size(500, 500)
     background(3)
     fill(200, 100, 200)
-    ellipse(50, 50 , 50, 50)
-    frameRate(1)
+    ellipse(50, yPos, 50, 50)
   }
 
   override def draw() ={
     background(3)
-    fill(random(200), 100, 200)
-    ellipse(50, 50 , 50, 50)
+
+    if (moveDown && yPos > height - 50) {
+      moveDown = false
+    }
+    if (!moveDown && yPos < 50) {
+      moveDown = true
+    }
+
+    if (moveDown) {
+      yPos = yPos + 2
+    }
+    else {
+      yPos = yPos - 2
+    }
+
+    ellipse(50, yPos, 50, 50)
   }
 }
 
