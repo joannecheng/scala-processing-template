@@ -29,19 +29,19 @@ class MySketch extends PApplet {
     if (moveDown && yPos > height - 50) {
       moveDown = false
     }
+
     if (!moveDown && yPos < 50) {
       moveDown = true
     }
 
-    if (moveDown) {
-      yPos = yPos + 2
-    }
-    else {
-      yPos = yPos - 2
+    yPos = moveDown match {
+      case true => yPos + 2
+      case false => yPos - 2
     }
 
     ellipse(50, yPos, 50, 50)
   }
+
 }
 
 MySketch.main()
