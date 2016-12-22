@@ -1,7 +1,7 @@
 import processing.core._
 
 object MySketch extends PApplet {
-  def main() = {
+  def main(args: Array[String]) = {
     PApplet.runSketch(Array("MAIN"), new MySketch)
   }
 }
@@ -43,5 +43,3 @@ class MySketch extends PApplet {
   }
 
 }
-
-MySketch.main()

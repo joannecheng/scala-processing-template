@@ -12,7 +12,7 @@ Template for making scala processing projects on Mac OSX.
 If you installed Processing and Scala correctly, you can run the following command from `scala-processing/`
 
 ```
-./scala-processing mySketch.scala
+./scala-processing MySketch
 ```
 
 You should see the following:
